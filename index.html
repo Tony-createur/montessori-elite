@@ -33,6 +33,7 @@
       font-size: 38px;
       max-width: 800px;
       margin: auto;
+      line-height: 1.2;
     }
 
     .hero p {
@@ -40,6 +41,7 @@
       color: #555;
       max-width: 700px;
       margin: 20px auto;
+      line-height: 1.5;
     }
 
     .cta {
@@ -55,6 +57,11 @@
 
     .section {
       padding: 50px 20px;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
     }
 
     .grid {
@@ -73,27 +80,40 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
 
+    .card h3 {
+      margin-top: 0;
+    }
+
     .price {
       background: #222;
       color: white;
       padding: 40px 20px;
       border-radius: 20px;
-      max-width: 450px;
+      max-width: 500px;
       margin: auto;
     }
 
     .price h3 {
       margin-top: 0;
+      font-size: 30px;
+    }
+
+    .price h2 {
+      font-size: 42px;
+      margin: 15px 0 25px;
     }
 
     .price ul {
       list-style: none;
       padding: 0;
       text-align: left;
+      max-width: 320px;
+      margin: 0 auto 10px;
     }
 
     .price li {
       margin: 10px 0;
+      font-size: 17px;
     }
 
     .btn-pay {
@@ -110,14 +130,59 @@
     .small {
       font-size: 13px;
       color: #ccc;
-      margin-top: 10px;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .trust {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .legal {
+      background: #fff;
+      padding: 50px 20px;
+    }
+
+    .legal h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .legal p {
+      max-width: 800px;
+      margin: 10px auto;
+      font-size: 13px;
+      color: #666;
+      line-height: 1.7;
     }
 
     .footer {
       background: white;
-      padding: 40px 20px;
+      padding: 30px 20px;
       font-size: 14px;
       color: #666;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section h2 {
+        font-size: 26px;
+      }
+
+      .price h2 {
+        font-size: 34px;
+      }
     }
   </style>
 </head>
@@ -131,11 +196,12 @@
 <section class="hero">
   <h1>Occupez votre enfant intelligemment sans écran</h1>
   <p>
+    🔥 Offre de lancement : accès immédiat à Montessori Elite Premium.<br>
     3 activités Montessori simples chaque semaine pour développer autonomie,
     concentration et calme avec du matériel que vous avez déjà chez vous.
   </p>
 
-  <a href="#offre" class="cta">Découvrir</a>
+  <a href="#offre" class="cta">Découvrir l’offre</a>
 </section>
 
 <section class="section">
@@ -144,17 +210,17 @@
   <div class="grid">
     <div class="card">
       <h3>Simple</h3>
-      <p>Aucune préparation compliquée.</p>
+      <p>Aucune préparation compliquée. Des idées faciles à mettre en place à la maison.</p>
     </div>
 
     <div class="card">
       <h3>Rapide</h3>
-      <p>10 minutes suffisent.</p>
+      <p>Quelques minutes suffisent pour proposer une activité utile et apaisante.</p>
     </div>
 
     <div class="card">
       <h3>Efficace</h3>
-      <p>Moins d’écran, plus de calme.</p>
+      <p>Moins d’écran, plus de calme, plus d’autonomie au quotidien.</p>
     </div>
   </div>
 </section>
@@ -164,10 +230,11 @@
 
   <div class="card" style="max-width:500px;margin:auto;">
     <h3>Transvasement à la cuillère</h3>
-    <p>Âge : 2-3 ans</p>
-    <p>Durée : 10 min</p>
-    <p>Matériel : 2 bols + riz</p>
-    <p>Objectif : motricité fine</p>
+    <p><strong>Âge :</strong> 2 à 3 ans</p>
+    <p><strong>Durée :</strong> 10 min</p>
+    <p><strong>Matériel :</strong> 2 bols + riz</p>
+    <p><strong>Objectif :</strong> motricité fine et concentration</p>
+    <p><strong>Conseil :</strong> laissez l’enfant recommencer tranquillement sans trop corriger.</p>
   </div>
 </section>
 
@@ -180,7 +247,7 @@
 
     <ul>
       <li>✔ 3 nouvelles activités chaque semaine</li>
-      <li>✔ Matériel simple</li>
+      <li>✔ Matériel simple à la maison</li>
       <li>✔ Routines enfants</li>
       <li>✔ Accès immédiat</li>
     </ul>
@@ -193,25 +260,44 @@
       ✔ Sans engagement<br>
       ✔ Annulable à tout moment
     </div>
+
+    <div class="trust">
+      🔥 Déjà + de 120 parents utilisent Montessori Elite<br><br>
+      ⭐⭐⭐⭐⭐ « Mon enfant est beaucoup plus calme et concentré »<br>
+      ⭐⭐⭐⭐⭐ « Enfin des idées simples sans prise de tête »<br>
+      ⭐⭐⭐⭐⭐ « Ça change tout au quotidien »<br><br>
+      ⏳ Offre de lancement — prix susceptible d’augmenter
+    </div>
   </div>
 </section>
 
-<section class="section" style="background:#fff;">
+<section class="legal">
   <h3>Mentions légales</h3>
-  <p style="max-width:700px;margin:auto;font-size:13px;">
+  <p>
     Éditeur : Montessori Elite<br>
     Responsable : Anthony Meoli<br>
-    Contact : anthony.meoli@outlook.fr<br>
-    Hébergement : Netlify<br><br>
-    Montessori est une approche éducative non affiliée.
+    Contact : contact@montessori-elite.fr<br>
+    Hébergement : Netlify
   </p>
 
-  <h3 style="margin-top:30px;">CGV</h3>
-  <p style="max-width:700px;margin:auto;font-size:13px;">
-    Abonnement mensuel : 5,99€.<br>
-    Paiement via Stripe.<br>
-    Accès immédiat.<br>
-    Résiliation à tout moment.
+  <p>
+    Montessori est une approche éducative. Ce site n’est affilié à aucune organisation officielle Montessori.
+  </p>
+
+  <h3 style="margin-top:35px;">Conditions Générales de Vente</h3>
+  <p>
+    Montessori Elite propose un abonnement mensuel donnant accès à des contenus éducatifs destinés aux parents.
+    Le tarif de l’abonnement est de 5,99€ par mois.
+  </p>
+
+  <p>
+    Le paiement est effectué de manière sécurisée via Stripe.
+    L’accès est immédiat après validation du paiement.
+    La résiliation est possible à tout moment selon les modalités de la plateforme de paiement utilisée.
+  </p>
+
+  <p>
+    Les contenus sont fournis à titre informatif. Ils ne remplacent pas un accompagnement pédagogique ou médical personnalisé.
   </p>
 </section>
 
