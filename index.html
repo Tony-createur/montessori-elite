@@ -4,279 +4,219 @@
   <meta charset="UTF-8">
   <title>Montessori Elite</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="1 activité Montessori simple par jour pour aider votre enfant à apprendre, se concentrer et gagner en autonomie.">
+  <meta name="description" content="Activités Montessori simples pour enfants. Développez autonomie, concentration et calme sans écran.">
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: #f7f4ee;
       color: #222;
       text-align: center;
     }
 
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e6dfd2;
-      padding: 18px 20px;
+      background: white;
+      padding: 20px;
       font-size: 22px;
       font-weight: bold;
-      color: #2c2c2c;
+      border-bottom: 1px solid #eee;
     }
 
     .hero {
-      padding: 60px 20px 40px;
-      background: linear-gradient(to bottom, #f7f4ee, #fffdf9);
+      padding: 60px 20px;
     }
 
     .hero h1 {
-      font-size: 42px;
-      line-height: 1.2;
+      font-size: 38px;
       max-width: 800px;
-      margin: 0 auto 20px;
-      color: #2a2a2a;
+      margin: auto;
     }
 
     .hero p {
       font-size: 20px;
-      color: #5c5c5c;
-      max-width: 720px;
-      margin: 0 auto 30px;
-      line-height: 1.5;
+      color: #555;
+      max-width: 700px;
+      margin: 20px auto;
     }
 
     .cta {
-      display: inline-block;
       background: #222;
       color: white;
-      padding: 15px 28px;
+      padding: 15px 30px;
       border-radius: 10px;
       text-decoration: none;
-      font-size: 17px;
       font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
     }
 
     .section {
       padding: 50px 20px;
     }
 
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 15px;
-      color: #2a2a2a;
-    }
-
-    .section-text {
-      max-width: 760px;
-      margin: 0 auto 35px;
-      color: #666;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
       gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: auto;
     }
 
     .card {
       background: white;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 20px;
+      border-radius: 12px;
       text-align: left;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #2b2b2b;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #666;
-      line-height: 1.5;
-      margin-bottom: 0;
-    }
-
-    .activity-box {
-      max-width: 520px;
-      margin: 0 auto;
-      background: white;
-      padding: 28px;
-      border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      text-align: left;
-    }
-
-    .activity-box h3 {
-      margin-top: 0;
-      font-size: 26px;
-      color: #2b2b2b;
-    }
-
-    .activity-box p {
-      margin: 10px 0;
-      color: #555;
-      line-height: 1.5;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
 
     .price {
       background: #222;
       color: white;
+      padding: 40px 20px;
       border-radius: 20px;
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 35px 25px;
+      max-width: 450px;
+      margin: auto;
     }
 
     .price h3 {
       margin-top: 0;
-      font-size: 30px;
-    }
-
-    .price .amount {
-      font-size: 42px;
-      font-weight: bold;
-      margin: 15px 0;
     }
 
     .price ul {
       list-style: none;
       padding: 0;
-      margin: 25px 0;
       text-align: left;
     }
 
     .price li {
-      margin-bottom: 12px;
-      font-size: 17px;
+      margin: 10px 0;
     }
 
-    .price a {
+    .btn-pay {
       display: inline-block;
       background: white;
       color: #222;
-      padding: 14px 24px;
+      padding: 15px 25px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .small {
+      font-size: 13px;
+      color: #ccc;
       margin-top: 10px;
     }
 
     .footer {
-      padding: 35px 20px;
-      color: #777;
-      font-size: 15px;
-      background: #fff;
-      border-top: 1px solid #e6dfd2;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 30px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .section-title {
-        font-size: 26px;
-      }
+      background: white;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
+
 <body>
 
-  <header>Montessori Elite</header>
+<header>
+  Montessori Elite
+</header>
 
-  <section class="hero">
-    <h1>1 activité Montessori par jour pour apprendre sans stress</h1>
-    <p>
-      Des idées simples, rapides et adaptées à l’âge de votre enfant,
-      avec des objets que vous avez déjà à la maison.
-    </p>
-    <a class="cta" href="#offre">Découvrir l’offre</a>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">Pourquoi les parents aiment Montessori Elite</h2>
-    <p class="section-text">
-      Vous n’avez plus besoin de passer du temps à chercher des idées.
-      Nous vous aidons à proposer des activités utiles, calmes et intelligentes,
-      pour développer l’autonomie, la concentration et la motricité.
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Simple</h3>
-        <p>Des activités faciles à mettre en place, même avec peu de temps.</p>
-      </div>
-      <div class="card">
-        <h3>Rapide</h3>
-        <p>Quelques minutes suffisent pour proposer une activité utile à votre enfant.</p>
-      </div>
-      <div class="card">
-        <h3>Efficace</h3>
-        <p>Moins d’écran, plus de calme, plus d’autonomie au quotidien.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">Exemple d’activité du jour</h2>
-    <div class="activity-box">
-      <h3>Transvasement à la cuillère</h3>
-      <p><strong>Âge :</strong> 2 à 3 ans</p>
-      <p><strong>Durée :</strong> 10 minutes</p>
-      <p><strong>Matériel :</strong> 2 bols, du riz ou des pâtes, 1 cuillère</p>
-      <p><strong>Objectif :</strong> développer la motricité fine et la concentration</p>
-      <p><strong>Conseil :</strong> laissez l’enfant recommencer tranquillement sans trop corriger.</p>
-    </div>
-  </section>
-
-  <section class="section" id="offre">
-    <h2 class="section-title">Une offre simple pour démarrer</h2>
-    <p class="section-text">
-      Commencez avec une sélection d’activités puis accédez à la version premium
-      pour profiter de routines, idées exclusives et contenus ajoutés régulièrement.
-    </p>
-
-    <div class="price">
-      <h3>Montessori Elite Premium</h3>
-      <div class="amount">5,99€ / mois</div>
-      <ul>
-        <li>✔ Activités adaptées à l’âge</li>
-        <li>✔ Idées simples à faire à la maison</li>
-        <li>✔ Routines du matin et du soir</li>
-        <li>✔ 3 nouvelles activités Montessori chaque semaine</li>
-      </ul>
-
-      <a href="https://buy.stripe.com/4gM3cufNj1f70Ql6zu2Ji04" target="_blank" style="display:inline-block;background:#222;color:white;padding:15px 25px;border-radius:10px;text-decoration:none;font-weight:bold;">
-        S’abonner maintenant
-      </a>
-
-      <p style="margin-top:15px;color:#ccc;font-size:14px;">
-        ✔ Accès immédiat<br>
-        ✔ Annulable à tout moment<br>
-        ✔ Sans engagement
-      </p>
-    </div>
-  </section>
-
-  <div class="footer">
-  Montessori Elite — Des activités simples pour aider votre enfant à grandir avec plaisir.
-
-  <p style="font-size:12px;color:#aaa;margin-top:10px;">
-    Montessori est une approche éducative. Ce site n’est pas affilié à une organisation officielle Montessori.
+<section class="hero">
+  <h1>Occupez votre enfant intelligemment sans écran</h1>
+  <p>
+    3 activités Montessori simples chaque semaine pour développer autonomie,
+    concentration et calme avec du matériel que vous avez déjà chez vous.
   </p>
+
+  <a href="#offre" class="cta">Découvrir</a>
+</section>
+
+<section class="section">
+  <h2>Pourquoi ça marche</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Simple</h3>
+      <p>Aucune préparation compliquée.</p>
+    </div>
+
+    <div class="card">
+      <h3>Rapide</h3>
+      <p>10 minutes suffisent.</p>
+    </div>
+
+    <div class="card">
+      <h3>Efficace</h3>
+      <p>Moins d’écran, plus de calme.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Exemple d’activité</h2>
+
+  <div class="card" style="max-width:500px;margin:auto;">
+    <h3>Transvasement à la cuillère</h3>
+    <p>Âge : 2-3 ans</p>
+    <p>Durée : 10 min</p>
+    <p>Matériel : 2 bols + riz</p>
+    <p>Objectif : motricité fine</p>
+  </div>
+</section>
+
+<section class="section" id="offre">
+  <h2>Offre Premium</h2>
+
+  <div class="price">
+    <h3>Montessori Elite</h3>
+    <h2>5,99€ / mois</h2>
+
+    <ul>
+      <li>✔ 3 nouvelles activités chaque semaine</li>
+      <li>✔ Matériel simple</li>
+      <li>✔ Routines enfants</li>
+      <li>✔ Accès immédiat</li>
+    </ul>
+
+    <a href="https://buy.stripe.com/4gM3cufNj1f70Ql6zu2Ji04" target="_blank" class="btn-pay">
+      S’abonner maintenant
+    </a>
+
+    <div class="small">
+      ✔ Sans engagement<br>
+      ✔ Annulable à tout moment
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff;">
+  <h3>Mentions légales</h3>
+  <p style="max-width:700px;margin:auto;font-size:13px;">
+    Éditeur : Montessori Elite<br>
+    Responsable : Anthony Meoli<br>
+    Contact : anthony.meoli@outlook.fr<br>
+    Hébergement : Netlify<br><br>
+    Montessori est une approche éducative non affiliée.
+  </p>
+
+  <h3 style="margin-top:30px;">CGV</h3>
+  <p style="max-width:700px;margin:auto;font-size:13px;">
+    Abonnement mensuel : 5,99€.<br>
+    Paiement via Stripe.<br>
+    Accès immédiat.<br>
+    Résiliation à tout moment.
+  </p>
+</section>
+
+<div class="footer">
+  Montessori Elite — Aider votre enfant à grandir intelligemment.
 </div>
 
 </body>
