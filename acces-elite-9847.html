@@ -4,11 +4,28 @@
   <meta charset="UTF-8" />
   <title>Montessori Elite Premium</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Espace premium Montessori Elite : activités Montessori simples à faire à la maison." />
+  <meta
+    name="description"
+    content="Bibliothèque premium Montessori Elite : activités Montessori simples, calmes et utiles pour enfants de 2 à 6 ans."
+  />
   <meta name="robots" content="noindex, nofollow" />
 
   <style>
     * { box-sizing: border-box; }
+
+    :root {
+      --bg: #f7f4ee;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #666;
+      --line: #ece4d8;
+      --dark: #1f1f1f;
+      --soft: #efe4d1;
+      --accent: #6b4e2b;
+      --green: #2f6f4f;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 22px;
+    }
 
     html {
       scroll-behavior: smooth;
@@ -17,8 +34,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f7f4ee;
-      color: #222;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     img {
@@ -27,12 +49,8 @@
       border-radius: 18px;
     }
 
-    a {
-      color: inherit;
-    }
-
     .topbar {
-      background: #222;
+      background: var(--dark);
       color: #fff;
       text-align: center;
       padding: 10px 16px;
@@ -45,13 +63,13 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.95);
       border-bottom: 1px solid #eee;
+      backdrop-filter: blur(10px);
     }
 
     .nav {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: auto;
       padding: 16px 20px;
       display: flex;
@@ -73,81 +91,92 @@
     }
 
     .nav-links a {
-      text-decoration: none;
+      background: #f8f3ea;
+      border: 1px solid var(--line);
       padding: 10px 14px;
-      border-radius: 10px;
-      background: #f0e8dc;
+      border-radius: 12px;
       font-size: 14px;
       font-weight: bold;
     }
 
     .hero {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: auto;
-      padding: 60px 20px 35px;
+      padding: 50px 20px 24px;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
+      gap: 24px;
       align-items: center;
     }
 
+    .hero-card,
+    .hero-visual,
+    .filters-wrap,
+    .section-box,
+    .help-box,
+    .bonus-box {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
     .hero-card {
-      background: #fff;
       padding: 34px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .hero-visual {
+      padding: 14px;
     }
 
     .badge {
       display: inline-block;
-      background: #efe4d1;
-      color: #6c4d2b;
-      padding: 10px 15px;
+      background: var(--soft);
+      color: var(--accent);
+      padding: 10px 16px;
       border-radius: 999px;
       font-size: 14px;
       font-weight: bold;
       margin-bottom: 18px;
     }
 
-    .hero h1 {
-      font-size: 46px;
-      line-height: 1.1;
+    h1 {
+      font-size: 48px;
+      line-height: 1.08;
       margin: 0 0 16px;
     }
 
     .hero p {
       font-size: 18px;
       line-height: 1.7;
-      color: #555;
-      margin: 0 0 24px;
+      color: var(--muted);
+      margin: 0 0 18px;
     }
 
     .hero-points {
       display: grid;
       gap: 12px;
-      margin: 24px 0;
+      margin-top: 24px;
+      margin-bottom: 26px;
     }
 
     .hero-point {
       background: #faf7f1;
       border-radius: 14px;
       padding: 14px 16px;
-      font-size: 15px;
-      line-height: 1.6;
       color: #444;
+      line-height: 1.6;
+      font-size: 15px;
     }
 
     .hero-actions {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 26px;
     }
 
     .btn {
       display: inline-block;
-      text-decoration: none;
-      background: #222;
+      background: var(--dark);
       color: #fff;
       padding: 15px 24px;
       border-radius: 12px;
@@ -156,196 +185,237 @@
 
     .btn-secondary {
       display: inline-block;
-      text-decoration: none;
       background: transparent;
-      color: #222;
+      color: var(--dark);
       padding: 13px 22px;
       border-radius: 12px;
-      border: 2px solid #222;
+      border: 2px solid var(--dark);
       font-weight: bold;
     }
 
-    .visual-card {
-      background: #fff;
-      padding: 16px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
     .container {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: auto;
       padding: 0 20px 70px;
     }
 
-    .section {
-      padding: 26px 0 0;
+    .filters-wrap {
+      margin-top: 10px;
+      padding: 24px;
     }
 
-    .section h2 {
-      font-size: 34px;
-      margin: 0 0 12px;
-      text-align: center;
-    }
-
-    .section-intro {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      text-align: center;
-      color: #666;
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    .week-box {
-      background: linear-gradient(135deg, #222 0%, #3b2f23 100%);
-      color: #fff;
-      border-radius: 26px;
-      padding: 34px 24px;
-      margin-top: 12px;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.14);
-    }
-
-    .week-top {
+    .filters-head {
       display: flex;
       justify-content: space-between;
-      gap: 16px;
       align-items: center;
+      gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-    .week-top h3 {
+    .filters-head h2 {
       margin: 0;
       font-size: 30px;
     }
 
-    .week-label {
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.18);
+    .filters-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .filters-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      padding: 14px 14px;
+      border-radius: 12px;
+      border: 1px solid #ddd8cf;
+      background: #fff;
+      font-size: 15px;
+      color: #222;
+      outline: none;
+    }
+
+    .stats {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stat-chip {
+      background: #f8f3ea;
+      border: 1px solid var(--line);
       padding: 10px 14px;
       border-radius: 999px;
       font-size: 14px;
+      color: #444;
       font-weight: bold;
     }
 
-    .week-note {
-      color: #e6e6e6;
-      line-height: 1.7;
-      font-size: 16px;
-      margin: 0;
+    .section-title {
+      margin: 34px 0 16px;
+      font-size: 32px;
+      text-align: center;
     }
 
-    .activity-grid {
+    .section-subtitle {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      margin-top: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
     }
 
     .activity-card {
-      background: #fff;
+      background: var(--card);
       border-radius: 20px;
+      box-shadow: var(--shadow);
       padding: 22px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .activity-tag {
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 14px;
+    }
+
+    .tag {
       display: inline-block;
-      background: #efe4d1;
-      color: #6b4e2b;
       padding: 8px 12px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
-      margin-bottom: 14px;
+      background: var(--soft);
+      color: var(--accent);
+      margin-right: 6px;
+      margin-bottom: 6px;
     }
 
-    .activity-card h3 {
-      margin: 0 0 14px;
+    .card-title {
       font-size: 24px;
+      margin: 0;
+      line-height: 1.2;
     }
 
     .meta {
       display: grid;
       gap: 8px;
-      margin-bottom: 16px;
       color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .meta strong {
+      color: #222;
+    }
+
+    .block {
+      background: #faf7f1;
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: #444;
+      line-height: 1.7;
       font-size: 15px;
     }
 
-    .activity-card p {
-      color: #555;
-      line-height: 1.7;
-      margin: 10px 0;
-    }
-
-    .activity-block {
-      background: #faf7f1;
-      padding: 14px 16px;
-      border-radius: 14px;
-      margin-top: 12px;
-    }
-
-    .activity-block strong {
+    .block strong {
       display: block;
       margin-bottom: 6px;
+      color: #222;
     }
 
-    .visual-section {
-      margin-top: 26px;
-      background: #fff;
-      padding: 16px;
-      border-radius: 24px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    .empty-state {
+      display: none;
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-top: 10px;
     }
 
-    .routine-grid {
+    .section-box {
+      margin-top: 34px;
+      padding: 28px;
+    }
+
+    .section-box h2 {
+      margin-top: 0;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .section-box p.intro {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .routine-grid,
+    .bonus-grid,
+    .material-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 24px;
+      gap: 18px;
     }
 
-    .routine-card {
-      background: #fff;
+    .routine-card,
+    .bonus-card,
+    .material-card {
+      background: #faf7f1;
       border-radius: 18px;
       padding: 22px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
 
-    .routine-card h3 {
+    .routine-card h3,
+    .bonus-card h3,
+    .material-card h3 {
       margin-top: 0;
       margin-bottom: 12px;
       font-size: 22px;
     }
 
-    .routine-card ul {
+    .routine-card ul,
+    .material-card ul {
       margin: 0;
       padding-left: 18px;
       color: #555;
       line-height: 1.8;
-    }
-
-    .bonus-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 24px;
-    }
-
-    .bonus-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      text-align: left;
-    }
-
-    .bonus-card h3 {
-      margin-top: 0;
-      font-size: 22px;
-      margin-bottom: 10px;
     }
 
     .bonus-card p {
@@ -355,50 +425,52 @@
     }
 
     .help-box {
-      background: #fff;
-      padding: 28px;
-      border-radius: 22px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      max-width: 850px;
-      margin: 24px auto 0;
+      margin-top: 34px;
+      padding: 30px;
       text-align: center;
+    }
+
+    .help-box h2 {
+      margin: 0 0 10px;
+      font-size: 30px;
     }
 
     .help-box p {
-      margin: 10px 0;
-      color: #555;
+      margin: 8px 0;
+      color: var(--muted);
       line-height: 1.7;
-    }
-
-    .help-link {
-      font-weight: bold;
-      text-decoration: none;
-      color: #222;
     }
 
     .footer {
-      margin-top: 60px;
+      margin-top: 50px;
       background: #fff;
       border-top: 1px solid #eee;
-      padding: 28px 20px;
       text-align: center;
-      font-size: 14px;
+      padding: 28px 20px;
       color: #666;
+      font-size: 14px;
       line-height: 1.7;
     }
 
-    @media (max-width: 900px) {
+    .hidden-card {
+      display: none !important;
+    }
+
+    @media (max-width: 980px) {
       .hero {
         grid-template-columns: 1fr;
-        padding-top: 40px;
       }
 
-      .hero h1 {
-        font-size: 36px;
+      .filters-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .nav {
         padding: 14px 16px;
       }
@@ -408,41 +480,42 @@
       }
 
       .hero-card,
-      .visual-card,
-      .activity-card,
-      .routine-card,
-      .bonus-card,
+      .filters-wrap,
+      .section-box,
       .help-box {
-        padding: 20px;
+        padding: 22px;
       }
 
-      .hero h1 {
-        font-size: 30px;
+      .filters-grid {
+        grid-template-columns: 1fr;
       }
 
-      .section h2 {
-        font-size: 28px;
+      h1 {
+        font-size: 31px;
       }
 
-      .week-top h3 {
-        font-size: 24px;
+      .filters-head h2,
+      .section-box h2,
+      .help-box h2,
+      .section-title {
+        font-size: 27px;
       }
     }
   </style>
 </head>
-
 <body>
 
   <div class="topbar">
-    🔒 Espace Premium Montessori Elite — contenu réservé aux abonnés
+    🔒 Montessori Elite Premium — bibliothèque illimitée d’activités Montessori prêtes à utiliser
   </div>
 
   <header>
     <div class="nav">
       <div class="brand">Montessori Elite Premium</div>
       <div class="nav-links">
-        <a href="#semaine">Activités</a>
+        <a href="#bibliotheque">Activités</a>
         <a href="#routines">Routines</a>
+        <a href="#materiel">Matériel simple</a>
         <a href="#bonus">Bonus</a>
         <a href="#aide">Aide</a>
       </div>
@@ -451,161 +524,382 @@
 
   <section class="hero">
     <div class="hero-card">
-      <div class="badge">Bienvenue dans votre espace Premium</div>
-      <h1>Des activités simples pour un quotidien plus calme</h1>
+      <div class="badge">Accès illimité • 2 à 6 ans • Sans écran</div>
+      <h1>Une vraie bibliothèque premium, utilisable toute l’année</h1>
       <p>
-        Retrouvez ici vos activités Montessori prêtes à mettre en place,
-        avec très peu de préparation, du matériel simple et des consignes claires.
+        Choisissez l’âge, le besoin ou le temps disponible, puis trouvez immédiatement
+        une activité Montessori simple à faire à la maison.
+      </p>
+      <p>
+        Ici, pas de programme bloqué par semaine : tout est disponible tout de suite,
+        pour que chaque parent puisse commencer quand il veut.
       </p>
 
       <div class="hero-points">
-        <div class="hero-point">✔ Activités faciles à faire à la maison</div>
-        <div class="hero-point">✔ Objectifs clairs : autonomie, motricité, concentration</div>
-        <div class="hero-point">✔ Idéal pour occuper intelligemment votre enfant sans écran</div>
+        <div class="hero-point">✔ Contenu intemporel : pas besoin d’ajouter des semaines</div>
+        <div class="hero-point">✔ Tri instantané par âge, besoin et durée</div>
+        <div class="hero-point">✔ Activités concrètes, simples, utiles et rapides à lancer</div>
       </div>
 
       <div class="hero-actions">
-        <a class="btn" href="#semaine">Voir les activités</a>
+        <a class="btn" href="#bibliotheque">Explorer les activités</a>
         <a class="btn-secondary" href="mailto:contact@montessori-elite.fr">Contacter le support</a>
       </div>
     </div>
 
-    <div class="visual-card">
-      <img src="visuel-montessori-2.png" alt="Montessori Elite Premium">
+    <div class="hero-visual">
+      <img src="visuel-montessori-2.png" alt="Bibliothèque premium Montessori Elite">
     </div>
   </section>
 
   <div class="container">
 
-    <section class="section" id="semaine">
-      <h2>Activités de la semaine</h2>
-      <p class="section-intro">
-        Voici un exemple de contenu premium prêt à être utilisé immédiatement.
-        Tu pourras ensuite remplacer, ajouter ou dupliquer les cartes très facilement.
-      </p>
-
-      <div class="week-box">
-        <div class="week-top">
-          <h3>Semaine 1</h3>
-          <div class="week-label">Mise en place simple à la maison</div>
+    <section id="bibliotheque" class="filters-wrap">
+      <div class="filters-head">
+        <div>
+          <h2>Trouver la bonne activité maintenant</h2>
+          <p>Filtrez votre bibliothèque en quelques secondes.</p>
         </div>
-        <p class="week-note">
-          Objectif de la semaine : favoriser la concentration, la motricité fine et l’autonomie
-          avec des activités courtes, utiles et rassurantes.
-        </p>
       </div>
 
-      <div class="activity-grid">
-
-        <div class="activity-card">
-          <div class="activity-tag">Activité 1 • Motricité fine</div>
-          <h3>Transvasement à la cuillère</h3>
-
-          <div class="meta">
-            <div><strong>Âge :</strong> 2 à 3 ans</div>
-            <div><strong>Durée :</strong> 10 minutes</div>
-            <div><strong>Matériel :</strong> 2 bols, une cuillère, du riz ou des lentilles</div>
-          </div>
-
-          <p>
-            Installez deux bols sur une table. Placez du riz dans le premier bol.
-            Montrez calmement à votre enfant comment transférer le contenu avec une cuillère.
-          </p>
-
-          <div class="activity-block">
-            <strong>Objectif</strong>
-            Développer la coordination, la concentration et la précision du geste.
-          </div>
-
-          <div class="activity-block">
-            <strong>Conseil parent</strong>
-            Laissez l’enfant recommencer plusieurs fois sans corriger à chaque erreur.
-          </div>
+      <div class="filters-grid">
+        <div class="field">
+          <label for="searchInput">Recherche</label>
+          <input type="text" id="searchInput" placeholder="Exemple : eau, concentration, langage..." />
         </div>
 
-        <div class="activity-card">
-          <div class="activity-tag">Activité 2 • Vie pratique</div>
-          <h3>Verser de l’eau</h3>
-
-          <div class="meta">
-            <div><strong>Âge :</strong> 2 à 4 ans</div>
-            <div><strong>Durée :</strong> 8 à 12 minutes</div>
-            <div><strong>Matériel :</strong> 2 petits verres, un pichet, un plateau, une éponge</div>
-          </div>
-
-          <p>
-            Remplissez légèrement un petit pichet d’eau. Montrez à votre enfant comment
-            verser doucement d’un contenant à l’autre au-dessus d’un plateau.
-          </p>
-
-          <div class="activity-block">
-            <strong>Objectif</strong>
-            Travailler l’autonomie, la maîtrise du geste et le calme.
-          </div>
-
-          <div class="activity-block">
-            <strong>Conseil parent</strong>
-            Ajoutez une petite éponge pour que l’enfant puisse nettoyer seul s’il renverse.
-          </div>
+        <div class="field">
+          <label for="ageFilter">Âge</label>
+          <select id="ageFilter">
+            <option value="all">Tous les âges</option>
+            <option value="2-3 ans">2 à 3 ans</option>
+            <option value="3-4 ans">3 à 4 ans</option>
+            <option value="4-6 ans">4 à 6 ans</option>
+          </select>
         </div>
 
-        <div class="activity-card">
-          <div class="activity-tag">Activité 3 • Langage</div>
-          <h3>Panier des objets à nommer</h3>
-
-          <div class="meta">
-            <div><strong>Âge :</strong> 2 à 5 ans</div>
-            <div><strong>Durée :</strong> 10 minutes</div>
-            <div><strong>Matériel :</strong> 5 objets simples du quotidien</div>
-          </div>
-
-          <p>
-            Placez quelques objets dans un panier : cuillère, balle, brosse, tasse, clé.
-            Sortez-les un par un et nommez-les clairement avec votre enfant.
-          </p>
-
-          <div class="activity-block">
-            <strong>Objectif</strong>
-            Enrichir le vocabulaire et améliorer l’attention auditive.
-          </div>
-
-          <div class="activity-block">
-            <strong>Conseil parent</strong>
-            Parlez lentement et montrez l’objet en même temps pour renforcer l’association.
-          </div>
+        <div class="field">
+          <label for="goalFilter">Besoin</label>
+          <select id="goalFilter">
+            <option value="all">Tous les besoins</option>
+            <option value="Autonomie">Autonomie</option>
+            <option value="Concentration">Concentration</option>
+            <option value="Motricité fine">Motricité fine</option>
+            <option value="Langage">Langage</option>
+            <option value="Calme">Calme</option>
+            <option value="Vie pratique">Vie pratique</option>
+          </select>
         </div>
 
+        <div class="field">
+          <label for="timeFilter">Durée</label>
+          <select id="timeFilter">
+            <option value="all">Toutes les durées</option>
+            <option value="5-10 min">5 à 10 min</option>
+            <option value="10-15 min">10 à 15 min</option>
+            <option value="15-20 min">15 à 20 min</option>
+          </select>
+        </div>
       </div>
 
-      <div class="visual-section">
-        <img src="visuel-montessori-3.png" alt="Activités Montessori">
+      <div class="stats">
+        <div class="stat-chip"><span id="countVisible">12</span> activités affichées</div>
+        <div class="stat-chip">Bibliothèque illimitée utilisable toute l’année</div>
+        <div class="stat-chip">Matériel simple du quotidien</div>
       </div>
     </section>
 
-    <section class="section" id="routines">
-      <h2>Routines faciles à mettre en place</h2>
-      <p class="section-intro">
-        Ces petites habitudes permettent d’apaiser le quotidien et d’installer plus d’autonomie,
-        sans pression et sans organisation compliquée.
+    <h2 class="section-title">Bibliothèque d’activités premium</h2>
+    <p class="section-subtitle">
+      Chaque fiche est pensée pour être claire, rapide à comprendre et facile à mettre en place.
+    </p>
+
+    <div class="cards-grid" id="cardsGrid">
+
+      <article class="activity-card" data-age="2-3 ans" data-goal="Motricité fine" data-time="10-15 min" data-search="transvasement cuillère riz lentilles motricité concentration autonomie">
+        <div>
+          <span class="tag">2 à 3 ans</span>
+          <span class="tag">Motricité fine</span>
+          <span class="tag">10 à 15 min</span>
+        </div>
+        <h3 class="card-title">Transvasement à la cuillère</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> 2 bols, une cuillère, riz ou lentilles</div>
+          <div><strong>Objectif :</strong> précision du geste, patience, coordination</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Montrez calmement comment prendre le contenu d’un bol avec une cuillère, puis le déposer dans l’autre bol.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Laissez l’enfant recommencer plusieurs fois. La répétition fait partie de l’apprentissage.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="2-3 ans" data-goal="Vie pratique" data-time="10-15 min" data-search="verser eau pichet verre plateau éponge autonomie calme">
+        <div>
+          <span class="tag">2 à 3 ans</span>
+          <span class="tag">Vie pratique</span>
+          <span class="tag">10 à 15 min</span>
+        </div>
+        <h3 class="card-title">Verser de l’eau</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> 2 verres, 1 petit pichet, 1 plateau, 1 éponge</div>
+          <div><strong>Objectif :</strong> autonomie, contrôle du geste, calme</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Remplissez légèrement le pichet. Montrez comment verser doucement dans un verre, puis recommencer.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Prévoir une petite éponge rassure l’enfant : il peut réparer seul s’il renverse.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="2-3 ans" data-goal="Langage" data-time="5-10 min" data-search="panier objets nommer vocabulaire langage attention cuillère balle brosse tasse">
+        <div>
+          <span class="tag">2 à 3 ans</span>
+          <span class="tag">Langage</span>
+          <span class="tag">5 à 10 min</span>
+        </div>
+        <h3 class="card-title">Panier des objets à nommer</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> 5 objets du quotidien</div>
+          <div><strong>Objectif :</strong> vocabulaire, écoute, observation</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Sortez chaque objet du panier, nommez-le lentement puis invitez l’enfant à le répéter ou à le montrer.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Utilisez toujours des objets réels avant de passer aux images.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="3-4 ans" data-goal="Concentration" data-time="10-15 min" data-search="pinces pompons tri bols concentration précision motricité fine">
+        <div>
+          <span class="tag">3 à 4 ans</span>
+          <span class="tag">Concentration</span>
+          <span class="tag">10 à 15 min</span>
+        </div>
+        <h3 class="card-title">Tri avec des pinces</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> pinces, petits objets, 2 ou 3 bols</div>
+          <div><strong>Objectif :</strong> concentration, pince des doigts, coordination</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          L’enfant prend les objets avec une pince puis les dépose dans le bon bol.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Commencez avec peu d’objets pour éviter la surcharge.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="3-4 ans" data-goal="Autonomie" data-time="10-15 min" data-search="plier serviette linge autonomie routine maison vie pratique">
+        <div>
+          <span class="tag">3 à 4 ans</span>
+          <span class="tag">Autonomie</span>
+          <span class="tag">10 à 15 min</span>
+        </div>
+        <h3 class="card-title">Plier une petite serviette</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> petite serviette ou torchon léger</div>
+          <div><strong>Objectif :</strong> autonomie, ordre, séquence simple</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Montrez comment aligner les coins puis plier lentement une première fois.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Utilisez toujours le même support au début pour créer un repère.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="3-4 ans" data-goal="Calme" data-time="5-10 min" data-search="plateau calme silence observation respiration objets naturels">
+        <div>
+          <span class="tag">3 à 4 ans</span>
+          <span class="tag">Calme</span>
+          <span class="tag">5 à 10 min</span>
+        </div>
+        <h3 class="card-title">Plateau d’observation calme</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> plateau, feuille, caillou, coquillage, cuillère en bois</div>
+          <div><strong>Objectif :</strong> retour au calme, attention, observation</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Présentez 3 ou 4 objets simples sur un plateau. Invitez l’enfant à les observer, toucher et décrire.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Parlez moins. Laissez le rythme ralentir naturellement.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="4-6 ans" data-goal="Langage" data-time="10-15 min" data-search="lettres mobiles sons initial langage lecture vocabulaire">
+        <div>
+          <span class="tag">4 à 6 ans</span>
+          <span class="tag">Langage</span>
+          <span class="tag">10 à 15 min</span>
+        </div>
+        <h3 class="card-title">Chercher le son initial</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> images simples ou objets réels</div>
+          <div><strong>Objectif :</strong> conscience phonologique, langage, préparation lecture</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Présentez un objet et insistez doucement sur son premier son. Cherchez d’autres objets avec le même son.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Travaillez sur le son, pas le nom de la lettre au début.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="4-6 ans" data-goal="Vie pratique" data-time="15-20 min" data-search="éplucher banane oeuf autonomie cuisine vie pratique">
+        <div>
+          <span class="tag">4 à 6 ans</span>
+          <span class="tag">Vie pratique</span>
+          <span class="tag">15 à 20 min</span>
+        </div>
+        <h3 class="card-title">Préparer une petite collation</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> banane, couteau enfant, petite assiette</div>
+          <div><strong>Objectif :</strong> autonomie, confiance, séquence complète</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          L’enfant épluche, coupe, dispose puis nettoie son espace simplement.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Une activité utile du quotidien a souvent plus de valeur qu’un jeu compliqué.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="4-6 ans" data-goal="Concentration" data-time="10-15 min" data-search="suite logique perles boutons couleurs concentration ordre tri">
+        <div>
+          <span class="tag">4 à 6 ans</span>
+          <span class="tag">Concentration</span>
+          <span class="tag">10 à 15 min</span>
+        </div>
+        <h3 class="card-title">Reproduire une suite logique</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> boutons, perles ou petits objets colorés</div>
+          <div><strong>Objectif :</strong> logique, attention, observation</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Créez une petite suite : rouge, bleu, rouge, bleu. Demandez à l’enfant de continuer.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Faites simple au départ, puis augmentez progressivement la difficulté.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="3-4 ans" data-goal="Motricité fine" data-time="5-10 min" data-search="ouvrir fermer boites couvercles motricité doigts autonomie">
+        <div>
+          <span class="tag">3 à 4 ans</span>
+          <span class="tag">Motricité fine</span>
+          <span class="tag">5 à 10 min</span>
+        </div>
+        <h3 class="card-title">Ouvrir et fermer des boîtes</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> petites boîtes, pots, couvercles variés</div>
+          <div><strong>Objectif :</strong> force des doigts, précision, autonomie</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Présentez plusieurs contenants à ouvrir puis refermer soigneusement.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Variez les systèmes : visser, clipser, emboîter.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="2-3 ans" data-goal="Calme" data-time="5-10 min" data-search="mettre table calme ordre routine autonomie repas">
+        <div>
+          <span class="tag">2 à 3 ans</span>
+          <span class="tag">Calme</span>
+          <span class="tag">5 à 10 min</span>
+        </div>
+        <h3 class="card-title">Préparer sa place à table</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> set, verre, cuillère, petite assiette</div>
+          <div><strong>Objectif :</strong> routine, responsabilité, calme avant repas</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Invitez l’enfant à apporter un seul élément à la fois et à le poser toujours au même endroit.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Répétez le même rituel chaque jour pour installer l’autonomie.
+        </div>
+      </article>
+
+      <article class="activity-card" data-age="4-6 ans" data-goal="Autonomie" data-time="10-15 min" data-search="sac sortie ranger affaires autonomie ordre vêtements gourde">
+        <div>
+          <span class="tag">4 à 6 ans</span>
+          <span class="tag">Autonomie</span>
+          <span class="tag">10 à 15 min</span>
+        </div>
+        <h3 class="card-title">Préparer son petit sac</h3>
+        <div class="meta">
+          <div><strong>Matériel :</strong> petit sac, gourde, mouchoirs, vêtement léger</div>
+          <div><strong>Objectif :</strong> planification simple, autonomie, ordre</div>
+        </div>
+        <div class="block">
+          <strong>Étapes</strong>
+          Faites une petite liste visuelle mentale : gourde, mouchoirs, petit vêtement. L’enfant prépare seul.
+        </div>
+        <div class="block">
+          <strong>Conseil parent</strong>
+          Ne surchargez pas : 3 éléments suffisent pour commencer.
+        </div>
+      </article>
+
+    </div>
+
+    <div class="empty-state" id="emptyState">
+      Aucune activité ne correspond à vos filtres pour le moment. Essayez avec moins de critères ou changez votre recherche.
+    </div>
+
+    <section id="routines" class="section-box">
+      <h2>Routines faciles pour alléger le quotidien</h2>
+      <p class="intro">
+        Ces routines fixes rendent l’offre plus forte, car les parents ne cherchent pas seulement des activités :
+        ils veulent aussi un quotidien plus fluide.
       </p>
 
       <div class="routine-grid">
         <div class="routine-card">
           <h3>Routine du matin</h3>
           <ul>
-            <li>Choisir seul ses chaussettes</li>
-            <li>Mettre son linge sale dans le panier</li>
-            <li>Porter son verre jusqu’à la table</li>
-            <li>Ranger un objet après usage</li>
+            <li>Ouvrir les volets avec un adulte</li>
+            <li>Mettre son pyjama dans un panier</li>
+            <li>Boire un verre d’eau</li>
+            <li>Mettre ses chaussons</li>
+            <li>Apporter sa serviette ou son bol</li>
           </ul>
         </div>
 
         <div class="routine-card">
-          <h3>Routine calme après l’école</h3>
+          <h3>Routine retour à la maison</h3>
           <ul>
+            <li>Poser les chaussures au bon endroit</li>
+            <li>Mettre le manteau sur une patère basse</li>
             <li>Boire un verre d’eau</li>
-            <li>Enlever les chaussures</li>
-            <li>Faire une activité de manipulation 10 minutes</li>
+            <li>Faire une activité calme 10 minutes</li>
             <li>Ranger avant de passer à autre chose</li>
           </ul>
         </div>
@@ -613,72 +907,162 @@
         <div class="routine-card">
           <h3>Routine du soir</h3>
           <ul>
-            <li>Préparer les affaires du lendemain</li>
             <li>Choisir un livre</li>
+            <li>Préparer les vêtements du lendemain</li>
             <li>Éteindre les écrans plus tôt</li>
-            <li>Faire une activité calme et courte</li>
+            <li>Faire une activité courte et calme</li>
+            <li>Ranger un objet avant le coucher</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="section" id="bonus">
+    <section id="materiel" class="section-box">
+      <h2>Matériel minimal pour tout utiliser</h2>
+      <p class="intro">
+        L’un des gros freins à l’achat, c’est la peur de devoir acheter beaucoup de choses.
+        Ici, tu rassures immédiatement.
+      </p>
+
+      <div class="material-grid">
+        <div class="material-card">
+          <h3>Base cuisine</h3>
+          <ul>
+            <li>2 petits bols</li>
+            <li>1 cuillère</li>
+            <li>1 petit pichet</li>
+            <li>1 plateau</li>
+            <li>1 éponge</li>
+          </ul>
+        </div>
+
+        <div class="material-card">
+          <h3>Base motricité</h3>
+          <ul>
+            <li>Pinces</li>
+            <li>Pompons ou bouchons</li>
+            <li>Petits pots</li>
+            <li>Boîtes à ouvrir</li>
+            <li>Boutons ou perles</li>
+          </ul>
+        </div>
+
+        <div class="material-card">
+          <h3>Base langage</h3>
+          <ul>
+            <li>Objets du quotidien</li>
+            <li>Petit panier</li>
+            <li>Images simples</li>
+            <li>Livres courts</li>
+            <li>Cartes maison si besoin</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="bonus" class="section-box">
       <h2>Bonus Premium</h2>
-      <p class="section-intro">
-        Tu peux utiliser cette zone pour enrichir l’abonnement et donner plus de valeur perçue.
+      <p class="intro">
+        Ces blocs donnent plus de valeur perçue et aident à justifier l’abonnement mensuel même sans nouveauté chaque semaine.
       </p>
 
       <div class="bonus-grid">
         <div class="bonus-card">
-          <h3>Fiche matériel minimal</h3>
+          <h3>Conseil Montessori essentiel</h3>
           <p>
-            2 bols, une cuillère, des pinces, un plateau, une petite éponge,
-            quelques objets du quotidien et des graines suffisent déjà pour démarrer.
-          </p>
-        </div>
-
-        <div class="bonus-card">
-          <h3>Conseil Montessori</h3>
-          <p>
-            Présente une seule activité à la fois. Un environnement simple aide l’enfant
-            à mieux se concentrer et à aller au bout de son action.
+            Présente toujours une seule activité à la fois. Un environnement simple aide l’enfant
+            à mieux se concentrer, à aller au bout de son action et à ressentir une vraie réussite.
           </p>
         </div>
 
         <div class="bonus-card">
           <h3>Astuce parent débordé</h3>
           <p>
-            Prépare un “coin activité” prêt à l’emploi dans un panier.
-            Tu gagnes du temps et l’enfant sait exactement où commencer.
+            Prépare un petit coin activité permanent dans un panier. Quand tu n’as pas d’idée,
+            tout est déjà prêt. Tu réduis l’effort mental et tu augmentes vraiment l’usage de l’abonnement.
+          </p>
+        </div>
+
+        <div class="bonus-card">
+          <h3>Règle d’or</h3>
+          <p>
+            Une activité simple bien présentée vaut mieux qu’un grand programme compliqué jamais utilisé.
+            L’objectif n’est pas de “faire plus”, mais de faire juste et facilement.
           </p>
         </div>
       </div>
-
-      <div class="visual-section">
-        <img src="visuel-montessori-4.png" alt="Méthode Montessori Elite">
-      </div>
     </section>
 
-    <section class="section" id="aide">
+    <section id="aide" class="help-box">
       <h2>Besoin d’aide ?</h2>
-      <div class="help-box">
-        <p><strong>Une question sur votre abonnement ou le contenu ?</strong></p>
-        <p>
-          Contactez-nous à l’adresse suivante :
-          <a class="help-link" href="mailto:contact@montessori-elite.fr">contact@montessori-elite.fr</a>
-        </p>
-        <p>
-          Nous vous répondrons dès que possible.
-        </p>
-      </div>
+      <p>
+        Une question sur l’accès, le contenu ou l’utilisation de la bibliothèque premium ?
+      </p>
+      <p>
+        Contact : <strong><a href="mailto:contact@montessori-elite.fr">contact@montessori-elite.fr</a></strong>
+      </p>
+      <p>
+        Nous vous répondrons dès que possible.
+      </p>
     </section>
 
   </div>
 
   <div class="footer">
-    Montessori Elite Premium — Contenu réservé aux abonnés.<br>
-    Ce contenu est fourni à titre informatif et pratique pour les parents.
+    Montessori Elite Premium — bibliothèque d’activités Montessori simple, intemporelle et accessible à tout moment.<br>
+    Contenu fourni à titre informatif pour les parents.
   </div>
 
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const ageFilter = document.getElementById('ageFilter');
+    const goalFilter = document.getElementById('goalFilter');
+    const timeFilter = document.getElementById('timeFilter');
+    const cards = Array.from(document.querySelectorAll('.activity-card'));
+    const countVisible = document.getElementById('countVisible');
+    const emptyState = document.getElementById('emptyState');
+
+    function normalize(str) {
+      return (str || '').toLowerCase().trim();
+    }
+
+    function filterCards() {
+      const search = normalize(searchInput.value);
+      const age = ageFilter.value;
+      const goal = goalFilter.value;
+      const time = timeFilter.value;
+
+      let visible = 0;
+
+      cards.forEach(card => {
+        const cardAge = card.dataset.age;
+        const cardGoal = card.dataset.goal;
+        const cardTime = card.dataset.time;
+        const cardSearch = normalize(card.dataset.search + ' ' + card.innerText);
+
+        const matchSearch = !search || cardSearch.includes(search);
+        const matchAge = age === 'all' || cardAge === age;
+        const matchGoal = goal === 'all' || cardGoal === goal;
+        const matchTime = time === 'all' || cardTime === time;
+
+        if (matchSearch && matchAge && matchGoal && matchTime) {
+          card.classList.remove('hidden-card');
+          visible++;
+        } else {
+          card.classList.add('hidden-card');
+        }
+      });
+
+      countVisible.textContent = visible;
+      emptyState.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterCards);
+    ageFilter.addEventListener('change', filterCards);
+    goalFilter.addEventListener('change', filterCards);
+    timeFilter.addEventListener('change', filterCards);
+
+    filterCards();
+  </script>
 </body>
 </html>
