@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Merci | Montessori Elite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Merci pour votre abonnement à Montessori Elite Premium." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f4ee;
+      color: #222;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 26px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+
+    .hero-content {
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #efe4d1;
+      color: #6b4e2b;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+      margin: 0 0 24px;
+    }
+
+    .success-box {
+      background: #faf7f1;
+      border-radius: 18px;
+      padding: 18px 18px;
+      margin-bottom: 24px;
+    }
+
+    .success-box p {
+      margin: 8px 0;
+      color: #444;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #222;
+      color: #fff;
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: #222;
+      padding: 13px 22px;
+      border-radius: 12px;
+      border: 2px solid #222;
+      font-weight: bold;
+    }
+
+    .hero-visual {
+      min-height: 100%;
+      background: #f3ecdf;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .section {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .mini-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+    }
+
+    .mini-card .num {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #222;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: #555;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .help {
+      margin-top: 28px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .help h2 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+
+    .help p {
+      margin: 8px 0;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .mail-link {
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 28px 20px 36px;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-content {
+        padding: 32px 22px;
+      }
+
+      .hero-visual {
+        padding: 14px;
+      }
+
+      .mini-card,
+      .help {
+        padding: 22px;
+      }
+
+      .lead {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    ✅ Paiement confirmé — bienvenue dans Montessori Elite Premium
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="hero">
+        <div class="hero-content">
+          <div class="badge">Abonnement validé avec succès</div>
+          <h1>Merci pour votre abonnement</h1>
+          <p class="lead">
+            Votre accès à <strong>Montessori Elite Premium</strong> est maintenant activé.
+            Vous pouvez découvrir vos activités et votre espace premium dès maintenant.
+          </p>
+
+          <div class="success-box">
+            <p>✔ Paiement reçu avec succès</p>
+            <p>✔ Accès Premium disponible immédiatement</p>
+            <p>✔ Activités prêtes à utiliser à la maison</p>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="/premium.html">Accéder à mon espace Premium</a>
+            <a class="btn-secondary" href="/">Revenir à l’accueil</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="visuel-montessori-2.png" alt="Bienvenue sur Montessori Elite Premium">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="mini-card">
+        <div class="num">1</div>
+        <h3>Ouvrez votre espace</h3>
+        <p>
+          Cliquez sur le bouton d’accès pour découvrir immédiatement votre espace premium.
+        </p>
+      </div>
+
+      <div class="mini-card">
+        <div class="num">2</div>
+        <h3>Choisissez une activité</h3>
+        <p>
+          Commencez par une activité simple avec peu de matériel pour une mise en route facile.
+        </p>
+      </div>
+
+      <div class="mini-card">
+        <div class="num">3</div>
+        <h3>Profitez du contenu</h3>
+        <p>
+          Retrouvez des idées utiles, pratiques et rassurantes pour un quotidien plus calme.
+        </p>
+      </div>
+    </div>
+
+    <div class="help">
+      <h2>Besoin d’aide ?</h2>
+      <p>
+        Si vous avez une question concernant votre abonnement ou l’accès à votre espace premium,
+        écrivez-nous à :
+      </p>
+      <p>
+        <a class="mail-link" href="mailto:contact@montessori-elite.fr">contact@montessori-elite.fr</a>
+      </p>
+      <p>Nous vous répondrons dès que possible.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Montessori Elite — Merci pour votre confiance.
+  </div>
+
+</body>
+</html>
